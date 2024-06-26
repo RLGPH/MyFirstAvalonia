@@ -5,8 +5,8 @@ namespace FirstAvaloniaProject.Views;
 
 public partial class MainView : UserControl
 {
-    MathRightOrder mathRightOrder;
-    NumberSystemConv numberSystemConv;
+    MathRightOrder mathRightOrder = new();
+    NumberSystemConv numberSystemConv = new();
     public MainView()
     {
         InitializeComponent();
@@ -17,7 +17,8 @@ public partial class MainView : UserControl
     }
     private void Calculate(object source, RoutedEventArgs args)
     {
-        mathRightOrder.Equation(TB_First.Text);
+        int resault = mathRightOrder.Equation(TB_First.Text);
+        TB_Second.Text = resault.ToString();
     }
     private void BTN_mathsymbleplus(object source, RoutedEventArgs args)
     {
@@ -85,5 +86,4 @@ public partial class MainView : UserControl
         TB_Binary.Text = binaryNumber;
         TB_Oktal.Text = octalNumber;
     }
-    
 }

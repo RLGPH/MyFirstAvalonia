@@ -48,14 +48,30 @@
 						   Text="Number system converter with Avalonia UI">
 						</TextBlock>
 					</Border>
-					<TextBlock HorizontalAlignment="Center" Margin="0,0,120,-40">Binær</TextBlock>
-					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Binary" TextChanged="TB_Binary_TextChanged"></TextBox>
-					<TextBlock HorizontalAlignment="Center" Margin="0,0,130,-40">Decimal</TextBlock>
-					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Decimal" TextChanged="TB_Decimal_TextChanged"></TextBox>
-					<TextBlock HorizontalAlignment="Center" Margin="0,0,120,-40">Octal</TextBlock>
-					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Oktal" TextChanged="TB_Oktal_TextChanged"></TextBox>
-					<TextBlock HorizontalAlignment="Center" Margin="0,0,160,-40">Hexadecimal</TextBlock>
-					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Hexa" TextChanged="TB_Hexa_TextChanged"></TextBox>
+					<Grid>
+						<Grid.RowDefinitions>
+							<RowDefinition Height="50*"/>
+							<RowDefinition Height="50*"/>
+							<RowDefinition Height="50*"/>
+							<RowDefinition Height="50*"/>
+							<RowDefinition Height="50*"/>
+						</Grid.RowDefinitions>
+						<Grid.ColumnDefinitions>
+							<ColumnDefinition Width="150*"/>
+							<ColumnDefinition Width="200*"/>
+							<ColumnDefinition Width="50*"/>
+							<ColumnDefinition Width="200*"/>
+						    <ColumnDefinition Width="150*"/>
+						</Grid.ColumnDefinitions>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,-100,-40" Grid.Row="1" Grid.Column="1">Binær</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,100,10" x:Name="TB_Binary" TextChanged="TB_Binary_TextChanged" Grid.Row="1" Grid.Column="2"></TextBox>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,-100,-40" Grid.Row="2" Grid.Column="1">Decimal</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,100,10" x:Name="TB_Decimal" TextChanged="TB_Decimal_TextChanged" Grid.Row="2" Grid.Column="2"></TextBox>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,-100,-40" Grid.Row="3" Grid.Column="1">Octal</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,100,10" x:Name="TB_Oktal" TextChanged="TB_Oktal_TextChanged" Grid.Row="3" Grid.Column="2"></TextBox>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,-60,-40" Grid.Row="4" Grid.Column="1">Hexadecimal</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,100,10" x:Name="TB_Hexa" TextChanged="TB_Hexa_TextChanged" Grid.Row="4" Grid.Column="2"></TextBox>
+					</Grid>
 				</StackPanel>
 			</TabItem>
 			<TabItem Header="IP Calculator">
