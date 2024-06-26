@@ -13,21 +13,57 @@
   </Design.DataContext>
 
 	<Grid>
-		<StackPanel>
-			<Border Margin="5"
-			  CornerRadius="10"
-			  Background="LightBlue">
-				<TextBlock Margin="5"
-				   FontSize="24"
-				   HorizontalAlignment="Center"
-				   Text="Temperature Converter">
-				</TextBlock>
-			</Border>
-			<StackPanel>
-			</StackPanel>
-			<TextBox x:Name="TB_First" HorizontalAlignment="Center" Width="200"></TextBox>
-			<Button Name="BTN_Calculate" HorizontalAlignment="Center" Click="MoveText">Calculate</Button>
-			<TextBox x:Name="TB_Second" HorizontalAlignment="Center" Width="200"></TextBox>
-		</StackPanel>
+		<TabControl>
+			<TabItem Header="Calculator">
+				<StackPanel>
+					<Border Margin="5"
+					  CornerRadius="10"
+					  Background="LightBlue">
+						<TextBlock Margin="5"
+						   FontSize="24"
+						   HorizontalAlignment="Center"
+						   Text="Calculator with Avalonia UI">
+						</TextBlock>
+					</Border>
+					<StackPanel>
+					</StackPanel>
+					<Button HorizontalAlignment="Center" Margin="0,0,270,0" Click="BTN_Clear">Clear</Button>
+					<TextBox x:Name="TB_First" HorizontalAlignment="Center" Width="200" Margin="0,-30,0,0"></TextBox>
+					<Button HorizontalAlignment="Center" Margin="10,5,50,0" Width="28" Click="BTN_mathsymbleplus">+</Button>
+					<Button HorizontalAlignment="Center" Margin="20,-31,-20,0" Width="28" Click="BTN_mathsymbleminus">-</Button>
+					<Button HorizontalAlignment="Center" Margin="10,5,50,0" Width="28" Click="BTN_mathsymbletimes">*</Button>
+					<Button HorizontalAlignment="Center" Margin="20,-30,-20,5" Width="28" Click="BTN_mathsymbleDivde">/</Button>
+					<Button Name="BTN_Calculate" HorizontalAlignment="Center" Margin="0,0,0,5" Click="Calculate">Calculate</Button>
+					<TextBox x:Name="TB_Second" HorizontalAlignment="Center" Width="200"></TextBox>
+				</StackPanel>
+			</TabItem>
+			<TabItem Header="Numbersystem converter">
+				<StackPanel>
+					<Border Margin="5,5,5,15"
+					  CornerRadius="10"
+					  Background="LightBlue">
+						<TextBlock Margin="5"
+						   FontSize="24"
+						   HorizontalAlignment="Center"
+						   Text="Number system converter with Avalonia UI">
+						</TextBlock>
+					</Border>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,120,-40">Binær</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Binary" TextChanged="TB_Binary_TextChanged"></TextBox>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,130,-40">Decimal</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Decimal" TextChanged="TB_Decimal_TextChanged"></TextBox>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,120,-40">Octal</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Oktal" TextChanged="TB_Oktal_TextChanged"></TextBox>
+					<TextBlock HorizontalAlignment="Center" Margin="0,0,160,-40">Hexadecimal</TextBlock>
+					<TextBox HorizontalAlignment="Center" Margin="0,-5,0,10" x:Name="TB_Hexa" TextChanged="TB_Hexa_TextChanged"></TextBox>
+				</StackPanel>
+			</TabItem>
+			<TabItem Header="IP Calculator">
+				
+			</TabItem>
+			<TabItem Header="Misc">
+				
+			</TabItem>
+		</TabControl>
 	</Grid>
 </UserControl>
