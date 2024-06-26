@@ -78,7 +78,11 @@
 				
 			</TabItem>
 			<TabItem Header="Misc">
-				
+				<StackPanel>
+					<Border CornerRadius="10" Background="LightBlue" Margin="5">
+						<TextBlock Margin="5" FontSize="24" HorizontalAlignment="Center">Nothing yet may get expanded with more Tools</TextBlock>
+					</Border>
+				</StackPanel>
 			</TabItem>
 		</TabControl>
 	</Grid>

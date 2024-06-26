@@ -10,7 +10,10 @@ namespace FirstAvaloniaProject
     {
         public int Equation(string MathEquation)
         {
-            
+            string[] MathArray = MathEquation.Split(" ");
+
+
+
             return 0;
         }
     }

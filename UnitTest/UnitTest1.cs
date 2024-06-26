@@ -9,7 +9,7 @@ public class UnitTest1
     [Fact]
     public void simpleMath()
     {
-        int answer = mathRightOrder.Equation("2+2");
+        int answer = mathRightOrder.Equation("2 + 2");
         Equals(answer, 4);
     }
 
