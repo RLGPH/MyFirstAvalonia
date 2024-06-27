@@ -17,7 +17,7 @@ public partial class MainView : UserControl
     }
     private void Calculate(object source, RoutedEventArgs args)
     {
-        int resault = mathRightOrder.Equation(TB_First.Text);
+        double resault = mathRightOrder.Equation(TB_First.Text);
         TB_Second.Text = resault.ToString();
     }
     private void BTN_mathsymbleplus(object source, RoutedEventArgs args)

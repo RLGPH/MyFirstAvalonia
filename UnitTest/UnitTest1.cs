@@ -4,12 +4,12 @@ namespace UnitTest;
 
 public class UnitTest1
 {
-    MathRightOrder mathRightOrder;
+    MathRightOrder mathRightOrder = new();
     NumberSystemConv numberSystemConv = new();
     [Fact]
     public void simpleMath()
     {
-        int answer = mathRightOrder.Equation("2 + 2");
+        double answer = mathRightOrder.Equation("2+2");
         Equals(answer, 4);
     }
 
